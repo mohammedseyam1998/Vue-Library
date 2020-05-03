@@ -6,7 +6,7 @@
       :settings="settings"
       @ps-scroll-y="scrollHanle"
     >
-      <img src="../assets/logo.png" height="720" width="1280" alt="" />
+      <img src="../assets/logo.png" height="800" width="1300" alt="" />
     </VuePerfectScrollbar>
   </div>
 </template>

@@ -11,7 +11,7 @@
         Yuhuuu! This seems pretty damn simple
       </tab-content>
     </form-wizard>
-    <form-wizard
+    <!-- <form-wizard
       @on-complete="onComplete"
       title="This is a new title"
       subtitle="And a new subtitle"
@@ -30,7 +30,7 @@
       <tab-content title="Last step" icon="ti-check">
         Yuhuuu! This seems pretty damn simple
       </tab-content>
-    </form-wizard>
+    </form-wizard> -->
   </div>
 </template>
 

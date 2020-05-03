@@ -17,40 +17,44 @@ import i18n from "./i18n";
 import VueLazyload from "vue-lazyload";
 import Meta from "vue-meta";
 import VueMoment from "vue-moment";
+import VueSelect2 from "vue-select2";
+Vue.component("vue-select", VueSelect2);
 //import moment from 'moment-timezone'
 import VueQuill from "vue-quill";
 require("./animate.css");
 // import VueToastr, { Toastr, Toast, ToastProgress } from "../src/index";
 import VueToastr from "vue-toastr";
 import Vuelidate from "vuelidate";
- import "./assets/pp.scss";
-
-
-
+import "./assets/pp.scss";
 require("vue-tour/dist/vue-tour.css");
 
 const options = {
   confirmButtonColor: "#41b882",
-  cancelButtonColor: "#ff7674",
+  cancelButtonColor: "#ff7674"
 };
 
 Vue.use(VueSweetalert2, options);
 Vue.use(VueToast);
 Vue.use(VueToasted, {
-  iconPack: "material", // set your iconPack, defaults to material. material|fontawesome|custom-class
+  iconPack: "material" // set your iconPack, defaults to material. material|fontawesome|custom-class
 });
 Vue.use(VueTour);
 Vue.use(SmartTable);
 Vue.use(VueTimepicker);
 Vue.use(FlagIcon);
-Vue.use(VueLazyload);
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: "dist/error.png",
+  loading: "dist/loading.gif",
+  attempt: 1
+});
 Vue.use(Router);
 Vue.use(Meta, {
   keyName: "metaInfo",
   attribute: "data-vue-meta",
   ssrAttribute: "data-vue-meta-server-rendered",
   tagIDKeyName: "vmid",
-  refreshOnceOnNavigation: true,
+  refreshOnceOnNavigation: true
 });
 Vue.use(VueMoment);
 Vue.use(VueQuill);
@@ -62,5 +66,5 @@ new Vue({
   i18n,
   router,
   store,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount("#app");
