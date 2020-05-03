@@ -1,28 +1,24 @@
 <template>
-    <div class="isoicon">
- 
-<flag iso="it" />
-<flag iso="gb" />
-<flag iso="us" />
- 
-    </div>
+  <div class="isoicon">
+    <flag iso="it" />
+    <flag iso="gb" />
+    <flag iso="us" />
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
-<style >
+<style>
 .isoicon {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  font-size:180px;
+  font-size: 180px;
   padding: 5px;
 }
 </style>

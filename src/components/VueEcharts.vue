@@ -10,7 +10,7 @@ import "echarts/lib/chart/line";
 import "echarts/lib/component/polar";
 export default {
   components: {
-    "v-chart": ECharts,
+    "v-chart": ECharts
   },
   data() {
     let data = [];
@@ -24,26 +24,26 @@ export default {
     return {
       polar: {
         title: {
-          text: "osama",
+          text: "mohammed"
         },
         legend: {
-          data: ["line"],
+          data: ["line"]
         },
         polar: {
-          center: ["50%", "54%"],
+          center: ["50%", "54%"]
         },
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            type: "cross",
-          },
+            type: "cross"
+          }
         },
         angleAxis: {
           type: "value",
-          startAngle: 0,
+          startAngle: 0
         },
         radiusAxis: {
-          min: 0,
+          min: 0
         },
         series: [
           {
@@ -51,13 +51,13 @@ export default {
             name: "line",
             type: "line",
             showSymbol: false,
-            data: data,
-          },
+            data: data
+          }
         ],
-        animationDuration: 2000,
-      },
+        animationDuration: 2000
+      }
     };
-  },
+  }
 };
 </script>
 
