@@ -1,31 +1,30 @@
 <template>
   <div>
-      <div>mask=['###', '###-#', '###-##']</div>
-    <the-mask :mask="['###', '###-#', '###-##']" />
-    <div> mask=['###-#', '####-#', '#####-#', '######-#']</div>
+    <div>mask=['(##) ####-####', '(##) #####-####']</div>
+    <the-mask :mask="['(##) ####-####', '(##) #####-####']" />
+    <div>mask=['###-#', '####-#', '#####-#', '######-#']</div>
     <the-mask :mask="['###-#', '####-#', '#####-#', '######-#']" />
-    <div>  mask="FFFFFF" :tokens="hexTokens"</div>
+    <div>mask="FFFFFF" :tokens="hexTokens"</div>
     <the-mask mask="FFFFFF" :tokens="hexTokens" />
     <div>mask=['###.###.###-##', '##.###.###/####-##']</div>
     <the-mask :mask="['###.###.###-##', '##.###.###/####-##']" />
-
   </div>
 </template>
 
 <script>
-import {TheMask} from 'vue-the-mask'
+import { TheMask } from "vue-the-mask";
 export default {
-components: {TheMask},
+  components: { TheMask },
   data() {
     return {
       hexTokens: {
         F: {
-          pattern: /[0-9a-fA-F]/,
-          transform: (v) => v.toLocaleUpperCase(),
-        },
-      },
+          pattern: /[0-9a-zA-Z]/,
+          transform: v => v.toLocaleUpperCase()
+        }
+      }
     };
-  },
+  }
 };
 </script>
 

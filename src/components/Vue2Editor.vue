@@ -1,7 +1,8 @@
 <template>
   <div>
-    <button @click="saveContent" class="btn btn-primary">save Content</button>
     <vue-editor v-model="content"> </vue-editor>
+    <button @click="saveContent" class="btn btn-primary">save Content</button>
+
     <div v-html="content"></div>
   </div>
 </template>
@@ -11,12 +12,12 @@ import { VueEditor } from "vue2-editor";
 
 export default {
   components: {
-    VueEditor,
+    VueEditor
   },
 
   data() {
     return {
-      content: "<h3>Some initial content</h3>",
+      content: "<h3>Some initial content</h3>"
     };
   },
 
@@ -24,8 +25,8 @@ export default {
     saveContent() {
       // You have the content to save
       console.log(this.content);
-    },
-  },
+    }
+  }
 };
 </script>
 

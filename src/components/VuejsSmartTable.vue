@@ -43,8 +43,8 @@ export default {
     currentPage: 1,
     totalPages: 0,
     filters: {
-      name: { value: "", keys: ["name"] },
-    },
+      name: { value: "", keys: ["name"] }
+    }
   }),
   methods: {
     nameLength(row) {
@@ -55,8 +55,8 @@ export default {
       let date2 = new Date(b.registered).getTime();
 
       return date1 - date2;
-    },
-  },
+    }
+  }
 };
 </script>
 

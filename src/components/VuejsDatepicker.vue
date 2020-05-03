@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-
     <h1>Datepicker Examples</h1>
 
     <div class="example">
       <h3>Default datepicker</h3>
       <datepicker placeholder="Select Date"></datepicker>
       <code>
-          &lt;datepicker placeholder="Select Date"&gt;&lt;/datepicker&gt;
+        &lt;datepicker placeholder="Select Date"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
     <div class="example">
-        <h3>v-model datepicker</h3>
-        <datepicker placeholder="Select Date" v-model="vModelExample"></datepicker>
-        <code>
-            &lt;datepicker placeholder="Select Date" v-model="vmodelexample"&gt;&lt;/datepicker&gt;
-        </code>
-        <hr/>
+      <h3>v-model datepicker</h3>
+      <datepicker
+        placeholder="Select Date"
+        v-model="vModelExample"
+      ></datepicker>
+      <code>
+        &lt;datepicker placeholder="Select Date"
+        v-model="vmodelexample"&gt;&lt;/datepicker&gt;
+      </code>
+      <hr />
       <p>{{ vModelExample }}</p>
     </div>
 
@@ -32,11 +35,19 @@
         <div class="form-group">
           <label>Format</label>
           <select v-model="format">
-            <option value="d MMM yyyy" selected>d MMM yyyy - e.g 12 Feb 2016</option>
-            <option value="d MMMM yyyy">d MMMM yyyy - e.g 12 February 2016</option>
+            <option value="d MMM yyyy" selected
+              >d MMM yyyy - e.g 12 Feb 2016</option
+            >
+            <option value="d MMMM yyyy"
+              >d MMMM yyyy - e.g 12 February 2016</option
+            >
             <option value="yyyy-MM-dd">yyyy-MM-dd - e.g 2016-02-12</option>
-            <option value="dsu MMM yyyy">dsu MMM yyyy - e.g 12th Feb 2016</option>
-            <option value="D dsu MMM yyyy">D dsu MMM yyyy - e.g Sat 12th Feb 2016</option>
+            <option value="dsu MMM yyyy"
+              >dsu MMM yyyy - e.g 12th Feb 2016</option
+            >
+            <option value="D dsu MMM yyyy"
+              >D dsu MMM yyyy - e.g Sat 12th Feb 2016</option
+            >
           </select>
         </div>
       </div>
@@ -60,7 +71,7 @@
         </div>
         <div class="form-group">
           <label>Disabled Days of Month:</label>
-          <input type="text" value="" v-on:change="setDisabledDays">
+          <input type="text" value="" v-on:change="setDisabledDays" />
         </div>
         <pre>disabledDates: {{ disabledDates }}</pre>
 
@@ -131,7 +142,7 @@
         </div>
         <div class="form-group">
           <label>Highlight Days of Month:</label>
-          <input type="text" value="" v-on:change="setHighlightedDays">
+          <input type="text" value="" v-on:change="setHighlightedDays" />
         </div>
         <pre>highlighted: {{ highlighted }}</pre>
 
@@ -144,14 +155,22 @@
       <h3>Translations</h3>
       <h5>{{ languages[language].language }} datepicker</h5>
 
-      <datepicker :language="languages[language]" format="d MMMM yyyy"></datepicker>
+      <datepicker
+        :language="languages[language]"
+        format="d MMMM yyyy"
+      ></datepicker>
       <code>
-          &lt;datepicker :language="languages[language]"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :language="languages[language]"&gt;&lt;/datepicker&gt;
       </code>
       <div class="settings">
         <h5>Settings</h5>
         <select v-model="language">
-          <option :value="key" v-for="(language, key) in languages" :key="key">{{ language.language }}</option>
+          <option
+            :value="key"
+            v-for="(language, key) in languages"
+            :key="key"
+            >{{ language.language }}</option
+          >
         </select>
       </div>
     </div>
@@ -160,14 +179,14 @@
       <h3>Inline datepicker</h3>
       <datepicker :inline="true"></datepicker>
       <code>
-          &lt;datepicker :inline="true"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :inline="true"&gt;&lt;/datepicker&gt;
       </code>
     </div>
     <div class="example">
       <h3>RTL datepicker</h3>
       <datepicker :language="languages.he"></datepicker>
       <code>
-          &lt;datepicker  language="he"&gt;&lt;/datepicker&gt;
+        &lt;datepicker language="he"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
@@ -175,15 +194,21 @@
       <h3>Day view only</h3>
       <datepicker :minimumView="'day'" :maximumView="'day'"></datepicker>
       <code>
-        &lt;datepicker :minimumView="'day'" :maximumView="'day'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'day'"
+        :maximumView="'day'"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
     <div class="example">
       <h3>Day view only RTL</h3>
-      <datepicker :minimumView="'day'" :maximumView="'day'" :language="languages.he"></datepicker>
+      <datepicker
+        :minimumView="'day'"
+        :maximumView="'day'"
+        :language="languages.he"
+      ></datepicker>
       <code>
-        &lt;datepicker :minimumView="'day'" :maximumView="'day'" language="he"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'day'" :maximumView="'day'"
+        language="he"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
@@ -191,23 +216,34 @@
       <h3>Month view only</h3>
       <datepicker :minimumView="'month'" :maximumView="'month'"></datepicker>
       <code>
-        &lt;datepicker :minimumView="'month'" :maximumView="'month'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'month'"
+        :maximumView="'month'"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
     <div class="example">
       <h3>Day and month view only</h3>
-      <datepicker :minimumView="'day'" :maximumView="'month'" :initialView="'month'"></datepicker>
+      <datepicker
+        :minimumView="'day'"
+        :maximumView="'month'"
+        :initialView="'month'"
+      ></datepicker>
       <code>
-        &lt;datepicker :minimumView="'day'" :maximumView="'month'" :initialView="'month'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'day'" :maximumView="'month'"
+        :initialView="'month'"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
     <div class="example">
       <h3>Year and month view only</h3>
-      <datepicker :minimumView="'month'" :maximumView="'year'" :initialView="'year'"></datepicker>
+      <datepicker
+        :minimumView="'month'"
+        :maximumView="'year'"
+        :initialView="'year'"
+      ></datepicker>
       <code>
-        &lt;datepicker :minimumView="'month'" :maximumView="'year'" :initialView="'year'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'month'" :maximumView="'year'"
+        :initialView="'year'"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
@@ -216,7 +252,8 @@
       <datepicker ref="programaticOpen"></datepicker>
       <button @click="openPicker">Open Picker</button>
       <code>
-        &lt;datepicker :minimumView="'month'" :maximumView="'year'" :initialView="'year'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'month'" :maximumView="'year'"
+        :initialView="'year'"&gt;&lt;/datepicker&gt;
       </code>
     </div>
 
@@ -224,9 +261,10 @@
       <h3>Changed month event</h3>
       <datepicker v-on:changedMonth="logChangedMonth"></datepicker>
       <code>
-        &lt;datepicker :minimumView="'month'" :maximumView="'year'" :initialView="'year'"&gt;&lt;/datepicker&gt;
+        &lt;datepicker :minimumView="'month'" :maximumView="'year'"
+        :initialView="'year'"&gt;&lt;/datepicker&gt;
       </code>
-      <hr>
+      <hr />
       <p v-for="log in changedMonthLog" :key="log">{{ log }}</p>
     </div>
   </div>
@@ -341,7 +379,7 @@ export default {
       this.$refs.programaticOpen.showCalendar();
     },
     logChangedMonth(date) {
-      this.changedMonthLog.push(date)
+      this.changedMonthLog.push(date);
     }
   }
 };
